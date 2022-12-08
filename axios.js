@@ -1,6 +1,5 @@
 const axios = require('axios');
-const apiBinance = 'outroendpoint';
-
+const apiBinance = 'https://api1.binance.com/api/v3/exchangeInfo';
 async function main() {
     try {
         console.log('Olá, ')
@@ -14,7 +13,8 @@ async function main() {
             throw (err)
         })
 
-        const moedas = assets.filter(e => e.quoteAsset === 'BRL').map(e => { return e.baseAsset })
+        const moedas = assets.filter(e => e.quoteAsset === 'BRL')
+            .map(e => { return e.baseAsset })
         console.log(`Moedas Listadas com paridade ao BRL são: ${moedas}`)
     } catch (err) {
         console.error(`Falha na requisição: ${err.message}`)
@@ -22,5 +22,4 @@ async function main() {
         console.log('Obrigado por esperar! e até a próxima.')
     }
 }
-
 main()

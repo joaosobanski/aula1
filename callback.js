@@ -2,7 +2,8 @@ const fs = require('fs');
 
 console.log('Olá, ')
 
-console.log('Irei carregar as informações contidas no arquivo exemplo.txt')
+console.log('Irei carregar as informações contidas no arquivo' +
+    ' exemplo.txt')
 
 console.log('Aguarde um momento ...')
 

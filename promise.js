@@ -1,5 +1,4 @@
 const fs = require('fs');
-
 const readFile = path => new Promise((res, rej) => {
     fs.readFile(path, (err, data) => {
         if (err) {
@@ -9,7 +8,6 @@ const readFile = path => new Promise((res, rej) => {
             res(String(data))
     })
 })
-
 async function main() {
     console.log('Olá, ')
 
@@ -23,5 +21,4 @@ async function main() {
 
     console.log('Obrigado por esperar! e até a próxima.')
 }
-
 main()
